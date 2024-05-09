@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E27C5C12-D3E3-42FC-8B4C-90145B3259BD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>HuntflowAPI</RootNamespace>
+    <AssemblyName>HuntflowAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=7.0.10.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.7.0.10\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.67.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.67.0\lib\net462\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.67.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.67.0\lib\net462\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.67.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.67.0\lib\net462\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.67.0.3148, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Sheets.v4.1.67.0.3148\lib\net462\Google.Apis.Sheets.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.7.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Huntflow\Applicant.cs" />
+    <Compile Include="Data\Deserializer.cs" />
+    <Compile Include="Data\Huntflow\ManualSettings.cs" />
+    <Compile Include="Data\Huntflow\Organization.cs" />
+    <Compile Include="Data\Huntflow\RecruitmentStatus.cs" />
+    <Compile Include="Data\Huntflow\RejectionReasons.cs" />
+    <Compile Include="Data\Huntflow\Resume.cs" />
+    <Compile Include="Data\Huntflow\ApplicantStep.cs" />
+    <Compile Include="Data\Huntflow\Tag.cs" />
+    <Compile Include="Data\Serializer.cs" />
+    <Compile Include="Data\Huntflow\ApplicantWorklogs.cs" />
+    <Compile Include="Office\ExcelReport.cs" />
+    <Compile Include="Office\ExcelStyler.cs" />
+    <Compile Include="Report\DashboardReport.cs" />
+    <Compile Include="Report\ReportData.cs" />
+    <Compile Include="Report\ApplicantsReport.cs" />
+    <Compile Include="Huntflow\AuthToken.cs" />
+    <Compile Include="Data\Huntflow\HuntflowData.cs" />
+    <Compile Include="Data\Huntflow\Vacancy.cs" />
+    <Compile Include="Huntflow\SystemDictionaries\HuntflowCompanyDivisions.cs" />
+    <Compile Include="Huntflow\ApplicantsResumes\HuntflowApplicantsResume.cs" />
+    <Compile Include="Huntflow\TypeQSurveys\HuntflowApplicantSurveyForm.cs" />
+    <Compile Include="Huntflow\Applicants\HuntflowApplicant.cs" />
+    <Compile Include="Huntflow\Applicants\HuntflowApplicantWorklog.cs" />
+    <Compile Include="Huntflow\ApplicantsOffer\HuntflowOfferList.cs" />
+    <Compile Include="Huntflow\ApplicantsQuestionary\HuntflowQuestionarySchema.cs" />
+    <Compile Include="Huntflow\ApplicantOnVacancy\HuntflowRecruitmentStatuses.cs" />
+    <Compile Include="Huntflow\ApplicantOnVacancy\HuntflowRejectionReason.cs" />
+    <Compile Include="Huntflow\ApplicantsResumes\HuntflowResumeSources.cs" />
+    <Compile Include="Huntflow\ApplicantsTags\HuntflowTag.cs" />
+    <Compile Include="Huntflow\TypeASurveys\HuntflowApplicantFeedbackForms.cs" />
+    <Compile Include="Huntflow\UsersManagment\HuntflowControlTaskResult.cs" />
+    <Compile Include="Huntflow\OrganizationSettings\HuntflowCoworkers.cs" />
+    <Compile Include="Huntflow\CustomDictionaries\HuntflowCustomDictionaries.cs" />
+    <Compile Include="Huntflow\OrganizationSettings\HuntflowEmailTemplates.cs" />
+    <Compile Include="Huntflow\GetRequest.cs" />
+    <Compile Include="Huntflow\HuntflowRequest.cs" />
+    <Compile Include="Huntflow\BasicInformation\HuntflowOrganization.cs" />
+    <Compile Include="Huntflow\BasicInformation\HuntflowOrganizationInformation.cs" />
+    <Compile Include="Huntflow\ProductionCalendars\HuntflowNonWorkingDays.cs" />
+    <Compile Include="Huntflow\NullableConverter.cs" />
+    <Compile Include="Huntflow\SystemDictionaries\HuntflowOrganizationRegions.cs" />
+    <Compile Include="Huntflow\ProductionCalendars\HuntflowOrganizationsProductionCalendar.cs" />
+    <Compile Include="Huntflow\PostRequest.cs" />
+    <Compile Include="Huntflow\ProductionCalendars\HuntflowProductionCalendars.cs" />
+    <Compile Include="Huntflow\SystemAndSecurity\HuntflowSecurityLogs.cs" />
+    <Compile Include="Huntflow\SystemAndSecurity\HuntflowStatusOfASystemDelayedTask.cs" />
+    <Compile Include="Huntflow\TypeQSurveys\HuntflowSurveyQuestionarySchemas.cs" />
+    <Compile Include="Huntflow\OrganizationSettings\HuntflowVacancyReasons.cs" />
+    <Compile Include="Huntflow\Webhooks\HuntflowWebhooks.cs" />
+    <Compile Include="Report\PipeReport.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Huntflow\Users\HuntflowUsers.cs" />
+    <Compile Include="Huntflow\UserSettings\HuntflowUserCalendarAccounts.cs" />
+    <Compile Include="Huntflow\UserSettings\HuntflowUserEmailAccount.cs" />
+    <Compile Include="Huntflow\Vacancies\HuntflowVacancyQuotasInFrame.cs" />
+    <Compile Include="Huntflow\Vacancies\HuntflowVacancy.cs" />
+    <Compile Include="Huntflow\Vacancies\HuntflowVacancyFrame.cs" />
+    <Compile Include="Huntflow\Vacancies\HuntflowVacancyLogs.cs" />
+    <Compile Include="Huntflow\Vacancies\HuntflowVacancyPeriod.cs" />
+    <Compile Include="Huntflow\VacancyRequests\HuntflowVacancyRequestSchema.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Data\Huntflow\huntflow_auth_token.json" />
+    <None Include="Data\Huntflow\settings.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Huntflow\Cache\" />
+    <Folder Include="Google\" />
+    <Folder Include="Huntflow\Multivacancies\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
